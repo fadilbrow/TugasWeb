@@ -9,22 +9,22 @@ if (isset($_GET['op'])) {
 }
 if ($op == 'delete') {
     $id = $_GET['id'];
-    $sql1   = "select foto from tutors where id = '$id'";
+    $sql1   = "select foto from partners where id = '$id'";
     $q1     = mysqli_query($koneksi, $sql1);
     $r1     = mysqli_fetch_array($q1);
     @unlink("../gambar/" . $r1['foto']);
 
-    $sql1   = "delete from tutors where id = '$id'";
+    $sql1   = "delete from partners where id = '$id'";
     $q1     = mysqli_query($koneksi, $sql1);
     if ($q1) {
         $sukses     = "Berhasil hapus data";
     }
 }
 ?>
-<h1>Halaman Admin Tutors</h1>
+<h1>Halaman Admin Partners</h1>
 <p>
-    <a href="tutors_input.php">
-        <input type="button" class="btn btn-primary" value="Buat Tutors Baru" />
+    <a href="partners_input.php">
+        <input type="button" class="btn btn-primary" value="Buat Partners Baru" />
     </a>
 </p>
 <?php
@@ -64,7 +64,7 @@ if ($sukses) {
             }
             $sqltambahan    = " where " . implode(" or ", $sqlcari);
         }
-        $sql1   = "select * from tutors $sqltambahan";
+        $sql1   = "select * from partners $sqltambahan";
         $page   = isset($_GET['page']) ? (int)$_GET['page'] : 1;
         $mulai  = ($page > 1) ? ($page * $per_halaman) - $per_halaman : 0;
         $q1     = mysqli_query($koneksi, $sql1);
@@ -79,14 +79,14 @@ if ($sukses) {
         ?>
             <tr>
                 <td><?php echo $nomor++ ?></td>
-                <td><img src="../gambar/<?php echo tutors_foto($r1['id']) ?>" style="max-height:100px;max-width:100px" /></td>
+                <td><img src="../gambar/<?php echo partners_foto($r1['id']) ?>" style="max-height:100px;max-width:100px" /></td>
                 <td><?php echo $r1['nama'] ?></td>
                 <td>
-                    <a href="tutors_input.php?id=<?php echo $r1['id'] ?>">
+                    <a href="partners_input.php?id=<?php echo $r1['id'] ?>">
                         <span class="badge bg-warning text-dark">Edit</span>
                     </a>
 
-                    <a href="tutors.php?op=delete&id=<?php echo $r1['id'] ?>" onclick="return confirm('Apakah yakin mau hapus data bro?')">
+                    <a href="partners.php?op=delete&id=<?php echo $r1['id'] ?>" onclick="return confirm('Apakah yakin mau hapus data bro?')">
                         <span class="badge bg-danger">Delete</span>
                     </a>
                 </td>
@@ -106,7 +106,7 @@ if ($sukses) {
         for ($i = 1; $i <= $pages; $i++) {
         ?>
             <li class="page-item">
-                <a class="page-link" href="tutors.php?katakunci=<?php echo $katakunci ?>&cari=<?php echo $cari ?>&page=<?php echo $i ?>"><?php echo $i ?></a>
+                <a class="page-link" href="partners.php?katakunci=<?php echo $katakunci ?>&cari=<?php echo $cari ?>&page=<?php echo $i ?>"><?php echo $i ?></a>
             </li>
         <?php
         }

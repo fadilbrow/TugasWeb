@@ -21,15 +21,14 @@
     <img src="<?php echo ambil_gambar('39') ?>" />
 </section>
 
-<!-- untuk myteam -->
-<section id="myteam">
+<!-- untuk tutors -->
+<section id="tutors">
     <div class="tengah">
         <div class="kolom">
-            <p class="deskripsi">My Team</p>
-            <h2>Profile Team</h2>
+            <p class="deskripsi">Our Top Tutors</p>
+            <h2>Tutors</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, optio!</p>
         </div>
-
         <div class="tutor-list">
             <div class="kartu-tutor">
                 <img src="img/fadil.jfif" />
@@ -56,8 +55,34 @@
                     <p>Hana Tri A</p>
                 </a>
             </div>
+            <div class="tutor-list">
+                <div class="kartu-tutor">
+                    <img src="img/fadil.jfif" />
+                    <a href="https://www.instagram.com/fadil013/">
+                        <p>Fadilah N.H</p>
+                    </a>
+                </div>
+                <div class="kartu-tutor">
+                    <img src="img/farhan.jpeg" />
+                    <a href="https://www.instagram.com/hansetyaaa/">
+                        <p>M. Farhan S.W
+                        </p>
+                    </a>
+                </div>
+                <div class="kartu-tutor">
+                    <img src="img/andika.jpg" />
+                    <a href="https://www.instagram.com/dikaalsab/">
+                        <p>M.Andika A</p>
+                    </a>
+                </div>
+                <div class="kartu-tutor">
+                    <img src="img/pp.jfif" />
+                    <a href="">
+                        <p>Hana Tri A</p>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
 </section>
 
 <!-- untuk partners -->
@@ -71,19 +96,19 @@
 
         <div class="partner-list">
             <div class="kartu-partner">
-                <img src="https://tse2.mm.bing.net/th?id=OIP.KEVdrsX3sLhAbIsy7zQs4QHaHa&pid=Api&P=0&w=300&h=300" />
+                <img src="https://www.designevo.com/res/templates/thumb_small/black-wheat-and-mortarboard.png" />
             </div>
             <div class="kartu-partner">
-                <img src="https://tse2.mm.bing.net/th?id=OIP.55DCXbXlKDgEBoZhKxpzLAHaHa&pid=Api&P=0&w=300&h=300" />
+                <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-63.jpg" />
             </div>
             <div class="kartu-partner">
-                <img src="https://tse4.mm.bing.net/th?id=OIP.mjoG94zAqNefzlni3m2hRgHaHa&pid=Api&P=0&w=300&h=300" />
+                <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-62.jpg" />
             </div>
             <div class="kartu-partner">
-                <img src="https://tse3.mm.bing.net/th?id=OIP.t3BwUKghRPIH5bopyWLd9wHaHa&pid=Api&P=0&w=300&h=300" />
+                <img src="https://www.designevo.com/res/templates/thumb_small/encircled-branches-and-book.png" />
             </div>
             <div class="kartu-partner">
-                <img src="https://rekreartive.com/wp-content/uploads/2018/11/Logo-Polije-Politeknik-Negeri-Jember-Original-1024x1013.png" />
+                <img src="https://image.freepik.com/free-vector/campus-collage-university-education-logo-design-template_7492-64.jpg" />
             </div>
         </div>
     </div>
