@@ -1,24 +1,26 @@
 <?php include("inc_header.php") ?>
 <?php
 $judul      = "";
+
 $isi        = "";
 $error      = "";
 $sukses     = "";
 
-if(isset($_GET['id'])){
+if (isset($_GET['id'])) {
     $id = $_GET['id'];
-}else{
+} else {
     $id = "";
 }
 
-if($id != ""){
+if ($id != "") {
     $sql1   = "select * from info where id = '$id'";
-    $q1     = mysqli_query($koneksi,$sql1);
+    $q1     = mysqli_query($koneksi, $sql1);
     $r1     = mysqli_fetch_array($q1);
     $judul  = $r1['judul'];
+
     $isi        = $r1['isi'];
 
-    if($isi == ''){
+    if ($isi == '') {
         $error  = "Data tidak ditemukan";
     }
 }
@@ -26,18 +28,19 @@ if($id != ""){
 if (isset($_POST['simpan'])) {
     $judul      = $_POST['judul'];
     $isi        = $_POST['isi'];
-    
+
+
     if ($judul == '' or $isi == '') {
         $error     = "Silakan masukkan semua data yakni adalah data isi dan judul.";
     }
 
     if (empty($error)) {
-        if($id != ""){
-            $sql1   = "update info set judul = '$judul',isi='$isi',tgl_isi=now() where id = '$id'";
-        }else{
+        if ($id != "") {
+            $sql1   = "update info set judul = '$judul', isi='$isi',tgl_isi=now() where id = '$id'";
+        } else {
             $sql1       = "insert into info(judul,isi) values ('$judul','$isi')";
         }
-        
+
         $q1         = mysqli_query($koneksi, $sql1);
         if ($q1) {
             $sukses     = "Sukses memasukkan data";
@@ -79,7 +82,7 @@ if ($sukses) {
             <input type="text" class="form-control" id="judul" value="<?php echo $judul ?>" name="judul">
         </div>
     </div>
-    
+
     <div class="mb-3 row">
         <label for="isi" class="col-sm-2 col-form-label">Isi</label>
         <div class="col-sm-10">

@@ -35,8 +35,7 @@ if (isset($_POST['simpan'])) {
     if ($nama == '' or $isi == '') {
         $error     = "Silakan masukkan semua data yakni adalah data isi dan nama.";
     }
-    //Array ( [foto] => Array ( [name] => Budi Rahardjo.jpg [type] => image/jpeg [tmp_name] => C:\xampp2\tmp\php4FDD.tmp [error] => 0 [size] => 2375701 ) )
-    //print_r($_FILES);
+
     if ($_FILES['foto']['name']) {
         $foto_name = $_FILES['foto']['name'];
         $foto_file = $_FILES['foto']['tmp_name'];
@@ -131,7 +130,7 @@ if ($sukses) {
     <div class="mb-3 row">
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
-            <input type="submit" name=" n" value="Simpan Data" class="btn btn-primary" />
+            <input type="submit" name="simpan" value="Simpan Data" class="btn btn-primary" />
         </div>
     </div>
 </form>
